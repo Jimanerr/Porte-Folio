@@ -135,64 +135,22 @@
         }
     
     }
-    .profile-photo {
-        width: 180px;
-        height: 180px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid #333;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        margin-bottom: 20px;
-    }
-
+   
     h1 {
         font-size: 2em;
-        color: #333;
+        color: #ff1100;
         margin: 10px 0;
     }
-
-    .subtitle {
-        font-size: 1.2em;
-        color: #777;
-        margin-bottom: 20px;
+    p {
+        text-align: left;
     }
-
-    .info {
-        margin: 20px 0;
-        font-size: 1em;
-        line-height: 1.6;
-        color: #555;
-    }
-
-    .info strong {
-        color: #333;
-    }
-
     /* Style des liens pour un look épuré */
     a {
-        color: #333;
+        color: #ff1100;
         text-decoration: none;
+        text-align: justify;
     }
 
     a:hover {
-        color: #555;
         text-decoration: underline;
     }
-    /* Style du bouton de téléchargement */
-.download-btn {
-background-color: #ff1212;  /* Couleur rouge pour le bouton */
-color: white;  /* Texte en blanc */
-padding: 12px 24px;  /* Padding autour du texte */
-font-size: 1.1em;  /* Taille du texte */
-font-weight: bold;  /* Gras pour le texte */
-border: none;  /* Pas de bordure */
-border-radius: 25px;  /* Coins arrondis */
-cursor: pointer;  /* Curseur de souris sous forme de main */
-transition: background-color 0.3s ease, transform 0.3s ease;  /* Animation pour le hover */
-}
-
-/* Effet de hover pour le bouton */
-.download-btn:hover {
-background-color: #ff4f4f;  /* Changer la couleur de fond en survol */
-transform: scale(1.05);  /* Augmenter légèrement la taille du bouton */
-}

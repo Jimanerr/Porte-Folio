@@ -23,15 +23,21 @@ body {
 .nav-photo-nom a{
     text-decoration: none;
     color: white;
+    white-space: nowrap;
+
 }
 .nav-btn {
     display: flex;
     justify-content: right;
+    flex-wrap: nowrap;
+
 }
 
 .nav-btn a {
     text-decoration: none;
     color: rgb(255, 255, 255);
+    white-space: nowrap;
+
 }
 .nav-btn a:hover {
     text-decoration: none;
@@ -47,13 +53,73 @@ body {
 
 .navbar-item {
     padding: 10px;
-    margin: 20px 30px;
+    margin: 10% 30px;
 }
 
 .navbar-item:hover {
     background-color: rgb(255, 84, 84);
     border-radius: 25px;
 }
+/* */
+
+/* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        margin-right: 20px;
+    }
+
+    .nav-btn {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #ff1212;
+        width: 100%;
+        padding: 10px 0;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        
+    }
+
+    .nav-btn.show {
+        display: flex;
+    }
+
+    .navbar-item {
+        margin: 10px 0;
+        padding: 10px 20px;
+        text-align: center;
+        flex-wrap: nowrap;
+
+    }
+}
+
+
+
+
+
+
 
 .header {
     width: 70%;
@@ -482,5 +548,137 @@ body {
 }
 
 
+
+
+/* Général : Empêche tout débordement horizontal */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ajustement des marges/paddings */
+* {
+    box-sizing: border-box; /* Assure que les paddings ne causent pas de débordements */
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar : Ajustement sur mobile */
+@media screen and (max-width: 768px) {
+
+    .logo-dev img {
+        padding: 0;
+        max-width: 100%;
+    }
+    .header{
+        width: 90%;
+    }
+    .header p {
+        width: 100%;
+    }
+    .nom-prenom{
+        margin: 30px;
+    }
+    .desc-poste p {
+        margin: 10px 0;
+    }
+    .navbar {
+        flex-wrap: wrap; /* Permet de passer les éléments en dessous */
+        height: auto;    /* Ajuste la hauteur */
+    }
+
+    .nav-photo-nom {
+        margin: auto; /* Centre les éléments */
+    }
+
+    .nav-btn a {
+        padding: 10px 5px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .formations{
+        margin-top: 0;
+        font-size: small;
+    }
+.formations h1 {
+    padding-top: 0;
+}
+.formations p {
+    margin-top: 20px;
+}
+
+}
+/* Chronologie : Correction de largeur */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 90%;            /* Évite le débordement */
+        margin: 20px 0;
+    }
+
+    .frise {
+        margin: 0 50px;
+    }
+
+    .info-container {
+        width: 95%;
+        display: block;
+        text-align: center;
+        height:auto;
+    }
+    .info-content{
+        width: 100%;
+    }
+    .info-container img{
+        margin-right: 0;
+        width:100%;
+        height: 50%;
+    }
+    .info-description{
+        max-height: none;
+        overflow: auto;
+    }
+    .info-container p{
+        display: block;
+        width: 100%;
+    }
+}
+
+/* Hexagones : Responsivité */
+@media screen and (max-width: 768px) {
+
+    .hexagon {
+        width: 45%; /* Réduit la taille pour s'adapter */
+        height: auto;
+        min-width: 100px;
+        min-height: 100px;
+    }
+    .hexagon-content img {
+        display: flex;
+        justify-content: center;
+        width: 95%; /* Réduit la taille pour s'adapter */
+
+    }
+}
+
+/* Grille des actualités */
+@media screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* Affiche les éléments en colonne */
+        gap: 10px;
+        width: 95%; /* Ajuste à la largeur du viewport */
+    }
+
+    .grid-item {
+        padding: 20px 10px; /* Réduit les paddings */
+    }
+}
+
+/* Footer */
+@media screen and (max-width: 768px) {
+    .footer {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+}
 
 
