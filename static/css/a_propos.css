@@ -89,7 +89,7 @@
     @media screen and (max-width: 768px) {
         .hamburger {
             display: flex;
-            margin-right: 20px;
+            margin-right: 40px;
         }
     
         .nav-btn {
