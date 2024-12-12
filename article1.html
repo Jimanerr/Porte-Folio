@@ -3,127 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veille Technologique : Les "Villes Sensibles"</title>
+    <link rel="stylesheet" href="static/css/article1.css">
+
+    <title>À propos de moi</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
-
-        /* Style général de la page */
-        body {
-            margin: 0;
-            font-family: "Quicksand", sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-            flex-direction: column;
-        }
-
-        /* Navbar */
-        .navbar {
-            background-color: #ff1100;
-            width: 100%;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 10;
-        }
-
-        .navbar a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 1rem;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-
-        /* Conteneur principal */
-        .container {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 800px;
-            padding: 20px;
-            overflow: hidden;
-            margin-top: 70px; /* Décalage à cause de la navbar */
-            text-align: center; /* Centrer le contenu */
-            margin-left: auto;
-            margin-right: auto; /* Centrage horizontal */
-        }
-
-        /* Titre */
-        h1 {
-            color: #ff1100;
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-        }
-
-        /* Article */
-        .article {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: #555;
-            text-align: justify;
-        }
-
-        .article p {
-            margin-bottom: 15px;
-        }
-
-        /* Section pour ajouter du rouge et de la dynamique */
-        .highlight {
-            color: #ff1100;
-            font-weight: bold;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 0.9rem;
-            color: #777;
-        }
-
-        /* Style des liens */
-        a {
-            color: #ff1100;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+        </style>
 </head>
 <body>
-    <!-- Navbar -->
     <div class="navbar">
-        <a href="index.html#news">Accueil</a>
-        <a href="article1.html">Les "Villes Sensibles"</a>
-        <a href="article2.html">Article 2</a>
-        <a href="article3.html">Article 3</a>
-        <a href="article4.html">Article 4</a>
-        <a href="article5.html">Article 5</a>
-        <a href="article6.html">Article 6</a>
-    </div>
+        <div class="nav-photo-nom">
+            <div class="nom"><a href="index.html">Porte folio BOEHLER Gabriel</a></div>
+        </div>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-btn">
+            <div class="navbar-item"> <a href="projets.html">Projets</a></div>
+            <div class="navbar-item"><a href="index.html#formations">Expériences</a></div>
+            <div class="navbar-item"> <a href="index.html#competences">Compétences</a></div>
+            <div class="navbar-item"> <a href="index.html#news">News</a></div>
+            <div class="navbar-item"> <a href="a_propos.html">A propos</a></div>
+        </div>
+    </div> 
+
 
     <div class="container">
+        
         <h1>Les "Villes Sensibles" : Quand la Technologie Anticipe Nos Besoins</h1>
-        <div class="article">
-            <p>Les <span class="highlight">« villes sensibles »</span> sont des espaces urbains intégrant des capteurs et de l'IA pour répondre instantanément aux besoins des habitants. Imaginez des lampadaires qui s’ajustent en fonction du passage des piétons ou des poubelles qui alertent les services de collecte lorsqu'elles sont pleines.</p>
-            <p>Ces technologies visent à rendre les villes plus efficaces et adaptatives. Cependant, la gestion des données personnelles dans un tel environnement soulève des questions importantes sur la vie privée et la surveillance. L'avenir des villes pourrait bien être plus réactif et intelligent que jamais.</p>
-        </div>
-        <footer>
-            <p>&copy; 2024 Gabriel Boehler - <a href="index.html#news">Retour à l'accueil</a></p>
-        </footer>
+
+        
+        <p>Les « villes sensibles » sont des espaces urbains intégrant des capteurs et de l'IA pour répondre instantanément aux besoins des habitants. Imaginez des lampadaires qui s’ajustent en fonction du passage des piétons ou des poubelles qui alertent les services de collecte lorsqu'elles sont pleines.</p>
+        <p>Ces technologies visent à rendre les villes plus efficaces et adaptatives. Cependant, la gestion des données personnelles dans un tel environnement soulève des questions importantes sur la vie privée et la surveillance. L'avenir des villes pourrait bien être plus réactif et intelligent que jamais.</p>
+        <p>&copy; 2024 Gabriel Boehler - <a href="index.html#news">Retour à l'accueil</a></p>
+
     </div>
+    
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navBtn = document.querySelector('.nav-btn');
+    
+        hamburger.addEventListener('click', () => {
+            navBtn.classList.toggle('show');
+        });
+    </script>
+    
 </body>
 </html>

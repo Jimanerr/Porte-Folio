@@ -16,6 +16,11 @@
         <div class="nav-photo-nom">
             <div class="nom"><a href="index.html">Porte folio BOEHLER Gabriel</a></div>
         </div>
+        <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
         <div class="nav-btn">
             <div class="navbar-item"> <a href="projets.html">Projets</a></div>
             <div class="navbar-item"><a href="index.html#formations">Expériences</a></div>
@@ -23,8 +28,7 @@
             <div class="navbar-item"> <a href="index.html#news">News</a></div>
             <div class="navbar-item"> <a href="a_propos.html">A propos</a></div>
         </div>
-    </div>
-
+    </div>  
 
     <h1>Mes Projets</h1>
 
@@ -69,5 +73,14 @@
         </div>
     </div>
 
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const navBtn = document.querySelector('.nav-btn');
+    
+        hamburger.addEventListener('click', () => {
+            navBtn.classList.toggle('show');
+        });
+    </script>
+    
 </body>
 </html>
